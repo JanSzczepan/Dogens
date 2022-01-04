@@ -1,0 +1,26 @@
+.footer {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   padding: 30px 20px;
+   background-color: darken($dark-color, 12%);
+   color: $light-color;
+
+   @media(min-width: 700px) {
+      padding: 40px 20px;
+   }
+
+   .footer__icon {
+      font-size: 3rem;
+   }
+
+   .footer__text {
+      padding: 0 15px;
+      font-size: 1.6rem;
+
+      @media(min-width: 700px) {
+         font-size: 2.5rem;
+      }
+   }
+}

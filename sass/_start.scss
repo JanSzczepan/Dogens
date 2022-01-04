@@ -1,0 +1,195 @@
+@import './variables';
+
+.start {
+   padding: 50px 0;
+   background-color: $dark-color;
+
+   @media(min-width: 700px) {
+      padding: 80px 0;
+   }
+
+   .start__container {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+
+      @media(min-width: 1200px) {
+         display: grid;
+         grid-template-columns: 40% 60%;
+         grid-template-rows: auto 1fr;
+         grid-template-areas:
+            'photo title'
+            'photo info';
+         width: 70%;
+         max-width: 900px;
+         margin: 0 auto;
+         padding: 30px 0 30px 50px;
+         background-color: $light-color;
+         border-radius: 20px;
+         -webkit-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 1);
+         -moz-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 1);
+         box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 1);
+      }
+
+      @media(min-width: 2000px) {
+         max-width: 1100px;
+      }
+
+      .start__img-box {
+         margin: 30px auto;
+         padding: 0 20px;
+         position: relative;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         min-height: 150px;
+
+         @media(min-width: 700px) {
+            margin: 50px auto;
+            padding: 0 20%;
+            min-height: 300px;
+         }
+
+         @media(min-width: 1200px) {
+            grid-area: photo;
+            margin: -30px 0;
+            padding: 20px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+         }
+
+         .start__bg-img {
+            display: none;
+
+            @media(min-width: 1200px) {
+               display: block;
+               position: absolute;
+               top: 0;
+               left: 0;
+               right: 0;
+               bottom: 0;
+               margin-top: -5%;
+               margin-bottom: -5%;
+               margin-left: -5%;
+               margin-right: -5%;
+               padding: 5%;
+               background-repeat: no-repeat;
+               background-position: center;
+               background-size: cover;
+               filter: blur(10px);
+               z-index: 0;
+            }
+         }
+
+         .start__img {
+            width: 100%;
+            border-radius: 15px;
+            -webkit-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 1);
+            -moz-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 1);
+            box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 1);
+
+            @media(min-width: 1200px) {
+               position: relative;
+               -webkit-box-shadow: none;
+               -moz-box-shadow: none;
+               box-shadow: none;
+               border-radius: 0;
+               filter: blur(-10px);
+               z-index: 1;
+            }
+         }
+      }
+
+      .start__title-box {
+         @media(min-width: 1200px) {
+            grid-area: title;
+         }
+
+         @media(min-width: 1200px) {
+            padding: 20px 70px;
+         }
+      }
+
+      .start__info-box {
+         color: $light-color;
+         padding: 0 30px;
+
+         @media(min-width: 700px) {
+            padding: 0 28%;
+         }
+
+         @media(min-width: 1200px) {
+            grid-area: info;
+            padding: 20px 60px;
+            color: $dark-color;
+         }
+      }
+
+      .start__title {
+         margin: 0 auto;
+         padding: 0 30px;
+         text-align: center;
+         font-size: $title-size;
+         font-weight: normal;
+         color: $light-color;
+         line-height: 130%;
+
+         @media(min-width: 700px) {
+            font-size: 1.5 * $title-size;
+         }
+
+         @media(min-width: 1200px) {
+            color: $dark-color;
+         }
+
+         @media(min-width: 1200px) {
+            padding: 0;
+            text-align: start;
+         }
+      }
+
+      .start__text-box {
+         display: flex;
+         flex-direction: column;
+      }
+
+      .start__subtitle {
+         font-size: $subtitle-size;
+         margin: 10px 0;
+         line-height: 100%;
+
+         @media(min-width: 700px) {
+            font-size: 1.5 * $subtitle-size;
+            margin: 20px 0;
+         }
+
+         @media(min-width: 1200px) {
+            margin: 0 0 10px;
+         }
+      }
+
+      .start__slide {
+         padding: 0 10px;
+
+         @media(min-width: 700px) {
+            padding: 0 15px;
+         }
+      }
+
+      .start__text {
+         font-size: 1.6rem;
+
+         @media(min-width: 700px) {
+            font-size: 2rem;
+         }
+      }
+   }
+
+   .slick-prev:before,
+   .slick-next:before {
+      @media(min-width: 1200px) {
+         color: $dark-color;
+      }
+   }
+}

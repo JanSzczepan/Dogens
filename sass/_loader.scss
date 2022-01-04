@@ -1,0 +1,46 @@
+.start__loader-box {
+   display: none;
+   justify-content: center;
+   align-items: center;
+   min-height: 150px;
+   margin: 0 auto;
+   background-color: transparent;
+   z-index: 999;
+
+   @media(min-width: 700px) {
+      min-height: 300px;
+   }
+
+   .start__loader {
+      width: 50px;
+      height: 50px;
+      background-color: $light-color;
+      border-radius: 5px;
+      animation: rotateplane 1.2s infinite ease-in-out;
+
+      @media(min-width: 700px) {
+         width: 100px;
+         height: 100px;
+      }
+
+      @media(min-width: 1200px) {
+         width: 75px;
+         height: 75px;
+         background-color: $dark-color;
+      }
+   }
+}
+
+@keyframes rotateplane {
+   0% {
+      transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+   }
+
+   50% {
+      transform: perspective(120px) rotateX(-180deg) rotateY(0deg);
+   }
+
+   100% {
+      transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
+   }
+}
